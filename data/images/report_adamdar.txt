@@ -1,0 +1,21 @@
+============================================================
+  REPORT — SECURITY MONITORING SYSTEM
+  Date: 2026-02-17 23:43:06
+  File: C:/Users/22207/OneDrive/Рабочий стол/Ali/3_курс/2 семестр/Компьютерная ОИ (Жукабаева Т. К.)/проект/images/adamdar.png
+============================================================
+
+  People detected:        5
+  Dangerous objects:      0
+  Total objects:          5
+  Processing time:        37 ms
+
+  No threats detected.
+
+  Detailed list of detected objects:
+------------------------------------------------------------
+    1. [OK]     Person          Confidence: 89.9%  Coords: (1309, 446, 546x1500)
+    2. [OK]     Person          Confidence: 88.6%  Coords: (930, 526, 489x1365)
+    3. [OK]     Person          Confidence: 87.5%  Coords: (2257, 597, 444x1297)
+    4. [OK]     Person          Confidence: 86.5%  Coords: (495, 373, 473x1529)
+    5. [OK]     Person          Confidence: 84.5%  Coords: (1830, 405, 523x1539)
+------------------------------------------------------------
