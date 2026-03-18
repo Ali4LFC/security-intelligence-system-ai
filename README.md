@@ -1,86 +1,88 @@
 # AI Security Monitoring System (MVP) 🚀
 
-Система интеллектуального видеонаблюдения на базе **YOLOv8**, предназначенная для автоматического обнаружения людей, анализа их поз (скелетов) и мониторинга нескольких камер одновременно.
+[Русская версия (Russian Version)](./README_RU.md)
+
+An intelligent video surveillance system powered by **YOLOv8**, designed for automatic person detection, skeletal analysis (pose estimation), and multi-camera monitoring.
 
 ---
 
-## Основные возможности 🛠
+## Key Features 🛠
 
-- **Детекция скелетов (Pose Estimation)**: Используется модель `YOLOv8-pose` для определения 17 ключевых точек тела в реальном времени.
-- **Многокамерный режим**: Поддержка одновременного вывода нескольких видеопотоков в сетке (Grid View).
-- **Автопоиск камер**: Система автоматически находит подключенные USB-камеры, приоритизируя внешние устройства.
-- **Оптимизация производительности**:
-    - Использование легковесных моделей `nano` для высокого FPS.
-    - Оптимизированное разрешение обработки (640px).
-    - Многопоточная обработка видео для плавности интерфейса.
-- **Современный GUI**: Темная тема на базе `CustomTkinter`.
+- **Skeleton Detection (Pose Estimation)**: Uses `YOLOv8-pose` model to identify 17 body keypoints in real-time.
+- **Multi-Camera Mode**: Supports simultaneous display of multiple video streams in a grid (Grid View).
+- **Auto-Camera Discovery**: Automatically detects connected USB cameras, prioritizing external devices over built-in ones.
+- **Performance Optimization**:
+    - Uses lightweight `nano` models for high FPS.
+    - Optimized processing resolution (640px).
+    - Multi-threaded video processing for a smooth UI.
+- **Modern GUI**: Dark theme built with `CustomTkinter`.
 
 ---
 
-## Структура проекта 📂
+## Project Structure 📂
 
 ```text
-проект/
+project/
 ├── app/
-│   ├── core/           # Логика детекции (YOLO, OpenCV)
-│   ├── ui/             # Графический интерфейс (CustomTkinter)
-│   └── config.py       # Централизованные настройки
-├── models/             # Директория для весов нейросети (*.pt)
-├── assets/             # Тестовые видео и изображения
-├── main.py             # Точка входа в приложение
-├── requirements.txt    # Зависимости Python
-└── .gitignore          # Исключения для Git
+│   ├── core/           # Detection logic (YOLO, OpenCV)
+│   ├── ui/             # Graphical user interface (CustomTkinter)
+│   └── config.py       # Centralized configuration
+├── models/             # Directory for neural network weights (*.pt)
+├── assets/             # Test videos and images
+├── main.py             # Application entry point
+├── requirements.txt    # Python dependencies
+└── .gitignore          # Git exclusion rules
 ```
 
 ---
 
-## Установка и запуск 🚀
+## Installation & Setup 🚀
 
-### 1. Клонирование репозитория
+### 1. Clone the repository
 ```bash
 git clone https://github.com/vash-username/security-intelligence-system.git
 cd security-intelligence-system
 ```
 
-### 2. Установка зависимостей
-Рекомендуется использовать виртуальное окружение.
+### 2. Install dependencies
+Virtual environment is recommended.
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Подготовка моделей
-При первом запуске приложение автоматически скачает необходимые веса `yolov8n-pose.pt` в папку `models/`. Вы также можете скачать их вручную из [репозитория Ultralytics](https://github.com/ultralytics/ultralytics).
+### 3. Prepare models
+On first run, the app will automatically download the necessary `yolov8n-pose.pt` weights to the `models/` folder. You can also download them manually from the [Ultralytics repository](https://github.com/ultralytics/ultralytics).
 
-### 4. Запуск
+### 4. Run
 ```bash
 python main.py
 ```
 
 ---
 
-## Настройка нескольких камер 📹
+## Multi-Camera Configuration 📹
 
-Для изменения списка используемых камер откройте `app/config.py` и отредактируйте параметр:
+To change the list of cameras, open `app/config.py` and edit the following parameter:
 ```python
-CAMERA_INDICES = [0, 1]  # Индексы ваших камер
+CAMERA_INDICES = [0, 1]  # Your camera indices
 ```
-Система автоматически подстроит сетку отображения под количество камер.
+The system will automatically adjust the grid layout based on the number of cameras.
 
 ---
 
-## Технологический стек 💻
+## Tech Stack 💻
 
 - **Python 3.10+**
 - **Ultralytics YOLOv8** (Object Detection & Pose)
-- **OpenCV** (Обработка видео)
-- **CustomTkinter** (Современный UI)
-- **Pillow** (Работа с изображениями)
+- **OpenCV** (Video Processing)
+- **CustomTkinter** (Modern UI)
+- **Pillow** (Image Handling)
 
 ---
 
-## Автор 👤
+## Author 👤
 
-**Ali** — *Разработка и интеграция*
+**Ali** — *Development and Integration*
 
 ---
-*Проект разработан в рамках учебного курса "Компьютерная ОИ" (Жукабаева Т. К.)*
+*Project developed as part of the "Computer Information Processing" course (Zhukabayeva T. K.)*
